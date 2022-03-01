@@ -8,6 +8,6 @@ module "ec2" {
   ENV= var.ENV
 }
 
-#module "alb" {
-#  source = "git::https://github.com/smachisty92/terraform-mutable-alb"
-#}
+module "alb" {
+  source = "git::https://github.com/smachisty92/terraform-mutable-alb"
+}
