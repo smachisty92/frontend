@@ -3,11 +3,13 @@ help:
 
 
 dev:
+	@cd env-dev
 	rm -rf .terraform
-	terraform init -backend-config=./env/dev-backend.tfvars
-	terraform apply -auto-approve -var-file=env/dev.tfvars
+	terraform init
+	terraform apply -auto-approve
 
 prod:
+	@cd env-prod
 	rm -rf .terraform
-	terraform init -backend-config=./env/dev-backend.tfvars
-	terraform apply -auto-approve -var-file=env/dev.tfvars
+	terraform init
+	terraform apply
