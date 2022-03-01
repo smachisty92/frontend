@@ -11,3 +11,7 @@ module "ec2" {
 #module "alb" {
 #  source = "git::https://github.com/smachisty92/terraform-mutable-alb"
 #}
+
+output "EBS" {
+  value = "module.ec2.EBS"
+}
