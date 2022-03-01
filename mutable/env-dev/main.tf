@@ -13,5 +13,5 @@ module "ec2" {
 #}
 
 output "EBS" {
-  value = "module.ec2.EBS"
+  value = module.ec2.EBS
 }
