@@ -12,4 +12,4 @@ prod:
 	@cd env-prod
 	rm -rf .terraform
 	terraform init
-	terraform apply
+	terraform apply -auto-approve
