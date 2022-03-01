@@ -1,1 +1,0 @@
-variable "SERVER_COUNT" {}
