@@ -10,6 +10,7 @@ module "ec2" {
 
 module "alb" {
   source = "git::https://github.com/smachisty92/terraform-mutable-alb"
+  ENV= var.ENV
 }
 
 output "EBS" {
