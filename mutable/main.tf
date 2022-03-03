@@ -16,6 +16,8 @@ module "tags" {
   TAG_NAME = lookup(element(local.ALL_TAGS,count.index), "name")
   TAG_VALUE = lookup(element(local.ALL_TAGS,count.index), "value")
   ENV = var.ENV
+  RESOURCE_ID_COUNT = local.RESOURCE_ID_COUNT
+  ALL_TAG_IDS =module.ec2.ALL_TAG_IDS
 }
 
 
@@ -38,4 +40,5 @@ locals {
       value = "roboshop"
     }
   ]
+  RESOURCE_ID_COUNT = (var.OD_INSTANCE_COUNT * 2) + (var.SPOT_INSTANCE_COUNT * 3)
 }
