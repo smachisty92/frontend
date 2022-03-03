@@ -7,6 +7,7 @@ module "ec2" {
   COMPONENT = var.COMPONENT
   ENV= var.ENV
   ALB_ATTACH_TO = "frontend"
+  PORT = var.PORT
 }
 
 module "tags" {
@@ -18,6 +19,7 @@ module "tags" {
   ENV = var.ENV
   RESOURCE_ID_COUNT = local.RESOURCE_ID_COUNT
   ALL_TAG_IDS =module.ec2.ALL_TAG_IDS
+
 }
 
 
