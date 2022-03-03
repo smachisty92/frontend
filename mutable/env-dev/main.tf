@@ -6,7 +6,6 @@ module "ec2" {
   OD_INSTANCE_TYPE = var.OD_INSTANCE_TYPE
   COMPONENT = var.COMPONENT
   ENV= var.ENV
-  ALB_ATTACH_TO = "frontend"
 }
 
 module "alb" {
