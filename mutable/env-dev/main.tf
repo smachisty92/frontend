@@ -13,9 +13,6 @@ module "alb" {
   ENV= var.ENV
 }
 
-output "EBS" {
-  value = module.ec2.EBS
-}
 
 module "tags" {
   depends_on = [module.ec2]
