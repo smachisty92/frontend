@@ -7,6 +7,7 @@ module "ec2" {
   COMPONENT = var.COMPONENT
   ENV= var.ENV
   ALB_ATTACH_TO = "frontend"
+  TRIGGER = var.TRIGGER
   PORT = var.PORT
 }
 
